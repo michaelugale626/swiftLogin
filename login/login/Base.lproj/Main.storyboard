@@ -26,7 +26,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IaA-9B-LWA">
                                         <rect key="frame" x="0.0" y="65" width="334" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuX-dX-76p">
                                         <rect key="frame" x="0.0" y="130" width="334" height="45"/>
@@ -37,6 +37,10 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xnx-RT-muc"/>
+                                            <segue destination="rkH-5X-g6P" kind="show" id="qOH-jW-5gU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -55,7 +59,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sns-We-kSg"/>
                     <connections>
-                        <outlet property="loginButton" destination="yuX-dX-76p" id="GfO-l2-CRr"/>
                         <outlet property="passwordTextField" destination="IaA-9B-LWA" id="fPH-Ww-RZ2"/>
                         <outlet property="usernameTextField" destination="pPM-Oa-R0f" id="Kpg-pn-U8r"/>
                     </connections>
@@ -63,6 +66,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="M2g-UY-Bs0">
+            <objects>
+                <viewController id="rkH-5X-g6P" customClass="HomeViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PaR-Vw-vp5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDQ-pC-gmO">
+                                <rect key="frame" x="146.5" y="435" width="121" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="bUS-hH-LYX"/>
+                                    <constraint firstAttribute="height" constant="36" id="tDE-Aj-E28"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rDQ-pC-gmO" firstAttribute="centerY" secondItem="ZU6-CE-vA1" secondAttribute="centerY" id="B7A-cj-iZW"/>
+                            <constraint firstItem="rDQ-pC-gmO" firstAttribute="centerX" secondItem="ZU6-CE-vA1" secondAttribute="centerX" id="sdY-IJ-2O8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZU6-CE-vA1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9qk-43-7M2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vb-AB-qCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="znT-2R-O8m">
